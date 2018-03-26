@@ -22,6 +22,9 @@ p {
 a {
   color: #ffffff;
 }
+p a {
+  color: #767270;
+}
 .clear {
   clear: both;
 }
@@ -289,7 +292,7 @@ body {
 /* blog */
 .blog {
   position: relative;
-  height: 1000px;
+  /*height: 1000px;*/
 }
 .post-title {
   margin-top: -5px;
@@ -367,6 +370,9 @@ body {
   padding-bottom: 0px;
   background-color: #fff;
   padding: 20px 50px !important;
+}
+sup a {
+  color: #767270;
 }
 
 /* Contact */

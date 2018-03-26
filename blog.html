@@ -178,30 +178,76 @@
                         <div class="row">
                             <section id="main-content">
                                 <div id="guts">
-
-                                    <!-- Post 5 -->
-                                    <!-- <div class="blog" style="position: relative; height: 700px;"> -->
                                     <div class="blog">
-                                        <div class="col s12 m12 l12 blog-post" style="position: absolute; left: 0%; top: 0px;">
+
+                                        <!-- Post 7 -->
+                                        <div class="post">
                                             <div class="thumbnail z-depth-1 animated">
-                                                <img src="img/blog/elk.png" alt="" class="responsive-img"></img>
+                                                <img src="img/blog/nifi.png" alt="" class="responsive-img"></img>
                                                 <div class="blog-details">
-                                                    <div class="post-title" id="blog-post-5">
-                                                        <h2>ELK Stack & Docker</h2>
-                                                        <span>Feb 12, 2018</span>
+                                                    <div class="post-title" id="blog-post-2">
+                                                        <h2>NiFi is Awesome</h2>
+                                                        <span>Feb 27, 2018</span>
                                                     </div>
                                                     <div class="post-details">
-                                                        <p> Being able to consistently deploy essential infrastructure is crucial for showing a product to a client. Docker aids in this field as instead of having to setup a Virtual Machine (VM) for all services, using docker containers keeps deploying microservices a breeze.
+                                                        <p> Apache NiFi is a software project from the Apache Software Foundation designed to automate the flow of data between software systems. Based on the "NiagaraFiles" software previously developed by the NSA and open-sourced as a part of its technology transfer program in 2014. <sup><a href="www.google.com">[1]</a></sup> The software allows for quickly and easily setting up data flow pipelines to various services.
+                                                        </p>
+
+                                                        <p> At Champion Technology Inc., NiFi allows us to test and develop various different data streams and move data around. NiFi allows the user to track the data flow from source to destination with a visual representation and statistics at every connection and process along the way. On top of being able to move data around, NiFi itself can be used to filter data to various different pipes and different forms of output. Having a Python background, being able to use Jython, a Java variant of Python, made creating steps that altered, omitted, or remove data a breeze.
+                                                        </p>
+
+                                                        <p> Being able to quickly observe where data is going in a simple UI, and having scalability and stability of such a system is a major plus. When data seems to stop flowing it is nice to have the ability to quickly standup an intermediate system that can handle the data load and make debugging a complex system that much easier, <i>AND</i> it's free to use - why wouldn't you use NiFi? For more information on Nifi head to their homepage <a href="https://nifi.apache.org/">here</a>.
                                                         </p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- Post 4 -->
-                                    <div class="blog" style="position: relative; height: 600px;">
-                                        <div class="col s12 m12 l12 blog-post" style="position: absolute; left: 0%; top: 0px;">
+                                        <!-- Post 6 -->
+                                        <div class="post">
+                                            <div class="thumbnail z-depth-1 animated">
+                                                <img src="img/blog/kafka.png" alt="" class="responsive-img"></img>
+                                                <div class="blog-details">
+                                                    <div class="post-title" id="blog-post-1">
+                                                        <h2>Kafka</h2>
+                                                        <span>Feb 22, 2018</span>
+                                                    </div>
+                                                    <div class="post-details">
+                                                        <p> Apache Kafka is an open-source stream-processing software platform developed by the Apache Software Foundation written in Scala and Java. The project aims to provide a unified, high-throughput, low-latency platform for handling real-time data feeds. While our ELK stack has been working wonderfully, we have noticed that after a large inflow of data into our system, somewhere around 15mbps+ of data flowing through the <a href="https://github.com/logstash-plugins/logstash-output-stomp">STOMP output-plugin</a> was causing issues. Mainly events were getting to our software slower and slower over time. Hopefully this issue will be resolved soon.
+                                                        </p>
+
+                                                        <p> In the meantime, we chose to disable our use of the STOMP output-plugin and switched over to using the Kafka output plugin. Similar in use, Kafka is another great software that is now managed by the Apache foundation. Kafka is meant for building real-time streaming data pipelines that reliably get data between systems or applications and real-time streaming applications that transform or react to the streams of data. Topics in Kafka are always multi-subscriber; that is, a topic can have zero, one, or many consumers that subscribe to the data written to it - exactly what we needed to replace STOMP.
+                                                        </p>
+
+                                                        <p> The next step beyond Kafka is working with Elastic to determine the shortcomings of their stomp output plugin and why it is having such speed issues. If the previous posts haven't made it obvious enough, having flexibility in solutions and implementation is important to our software as our customers can have any array of these services to accomplish the necessary steps to get the appropriate data to our software.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Post 5 -->
+                                        <div class="post">
+                                            <div class="thumbnail z-depth-1 animated">
+                                                <img src="img/blog/elk.png" alt="" class="responsive-img"></img>
+                                                <div class="blog-details">
+                                                    <div class="post-title" id="blog-post-5">
+                                                        <h2>ELK Stack & AMQ Bundled With the Power of Docker</h2>
+                                                        <span>Feb 12, 2018</span>
+                                                    </div>
+                                                    <div class="post-details">
+                                                        <p> This week I got the pleasure to merge my knowledge of Docker Compose and the ELK stack with AMQ. As from my previous posts, Docker Compose allows to easily create some small simple configuration files to automate the Docker process of initializing, starting, and stopping of Docker containers. While ELK (Elasticsearch, Logstash, and Kibana) handles moving, filter, displaying, and searching abilities of logs. Apache AMQ makes piping the data to specific locations such as a specific topic or queue simple. Bundling these services together just seemed like the obvious next move.
+                                                        </p>
+
+                                                        <p> Having this ability makes debugging out of our shared development enviornment and into a single local enviornment as simple as typing in a single command. This single command starts ELK, AMQ, and connects everything needed by them to function properly. The process was relatively simple, and you can view the entire project at <a href="https://github.com/champtc/Infrastructure/tree/master/Docker">this</a> Github repository.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Post 4 -->
+                                        <div class="post">
                                             <div class="thumbnail z-depth-1 animated">
                                                 <img src="img/blog/docker-compose.png" alt="" class="responsive-img"></img>
                                                 <div class="blog-details">
@@ -210,17 +256,15 @@
                                                         <span>Feb 6, 2018</span>
                                                     </div>
                                                     <div class="post-details">
-                                                        <p> Being able to consistently deploy essential infrastructure is crucial for showing a product to a client. Docker aids in this field as instead of having to setup a Virtual Machine (VM) for all services, using docker containers keeps deploying microservices a breeze.
+                                                        <p> Docker Compose is a tool for defining and running multi-container Docker applications. A single Dockerfile is used to define any given Docker Container, while Docker Compose has its own configuartion file that helps define how the multiple containers interact with one another. For instance, for communication between containers their needs to be a network backend that defines which containers can communicate with one another. For an example Docker Compose file, see <a href="https://github.com/champtc/Infrastructure/blob/master/Docker/ctci/docker-compose.yml">here</a>.
                                                         </p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- Post 3 -->
-                                    <div class="blog" style="position: relative; height: 825px;">
-                                        <div class="col s12 m12 l12 blog-post" style="position: absolute; left: 0%; top: 0px;">
+                                        <!-- Post 3 -->
+                                        <div class="post">
                                             <div class="thumbnail z-depth-1 animated">
                                                 <img src="img/blog/docker-containers.png" alt="" class="responsive-img"></img>
                                                 <div class="blog-details">
@@ -238,11 +282,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- Post 2 -->
-                                    <div class="blog" style="position: relative; height: 710px;">
-                                        <div class="col s12 m12 l12 blog-post" style="position: absolute; left: 0%; top: 0px;">
+                                        <!-- Post 2 -->
+                                        <div class="post">
                                             <div class="thumbnail z-depth-1 animated">
                                                 <img src="img/blog/logstash.jpg" alt="" class="responsive-img"></img>
                                                 <div class="blog-details">
@@ -260,11 +302,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- Post 1 -->
-                                    <div class="blog" style="position: relative; height: 530px;">
-                                        <div class="col s12 m12 l12 blog-post" style="position: absolute; left: 0%; top: 0px;">
+                                        <!-- Post 1 -->
+                                        <div class="post">
                                             <div class="thumbnail z-depth-1 animated">
                                                 <img src="img/blog/activemq.png" alt="" class="responsive-img"></img>
                                                 <div class="blog-details">
@@ -282,8 +322,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
+                                    </div>
                                 </div>
                             </section>
                         </div>
