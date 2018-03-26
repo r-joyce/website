@@ -1,17 +1,12 @@
 /*------------------------------------------------------------------
 [ Color codes ]
-    main-color:         #5da4d9;
-    Blue:               #71DD75 (Blue)    [ This is the main color in Template ]
+    main-color:         #282c37;
+    Blue:               #2b90d9 (Blue)    [  ]
     white:              #FFFFFF (White)   [  ]
-    body-bg-color:      #eae8e7           [ body bg color ]
-    font-color:         #767270           [ font color  ]
-    border-color:       #4783c2;
+    body-bg-color:      #16191f           [ body bg color ]
+    font-color:         #d9e1e8           [ font color  ]
+    border-color:       #9baec8;
 ------------------------------------------------------------------ */
-/*16191f very dark*/
-/*282c37 grey*/
-/*9baec8 grey/blue*/
-/*d9e1e8 eggshell*/
-/*2b90d9 blue*/
 
 /* COLORS */
 a {
