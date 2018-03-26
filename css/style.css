@@ -7,6 +7,81 @@
     font-color:         #767270           [ font color  ]
     border-color:       #4783c2;
 ------------------------------------------------------------------ */
+/*16191f very dark*/
+/*282c37 grey*/
+/*9baec8 grey/blue*/
+/*d9e1e8 eggshell*/
+/*2b90d9 blue*/
+
+/* COLORS */
+a {
+  color: #d9e1e8;
+}
+body {
+  background-color: #16191f;
+  color: #d9e1e8;
+}
+.sidebar {
+  color: #d9e1e8;
+  background-color: #282c37;
+}
+.sidebar .skill-line .progress {
+  background-color: #2b90d9;
+}
+.sidebar .skill-line .determinate {
+  background-color: #d9e1e8;
+}
+.sidebar .info {
+  border-bottom: 1px solid #2b90d9;
+}
+#site-nav {
+  background-color: #282c37;
+}
+#site-nav a:hover,#site-nav a:focus{
+  color:#2b90d9;
+}
+#site-nav a:hover,#site-nav a:focus{
+  border-bottom:4px solid #2b90d9
+}
+.section .section-wrapper {
+  color: #ffffff;
+  background-color: #282c37;
+}
+.custom-content-wrapper {
+  border-bottom: 1px solid #2b90d9;
+}
+.custom-content-wrapper h3 span {
+  color: #9baec8;
+}
+.custom-content-wrapper span {
+  color: #2b90d9;
+}
+.post-title {
+  color: white;
+}
+#blog-post-1 {
+  background-color: #e95855;
+}
+#blog-post-2 {
+  background-color: #707281;
+}
+#blog-post-3 {
+  background-color: #564d52;
+}
+#blog-post-4 {
+  background-color: #47bac9;
+}
+#blog-post-5 {
+  background-color: #68c02e;
+}
+.post-details {
+  background-color: #282c37;
+}
+sup a {
+  color: #767270;
+}
+/* END COLORS */
+
 * {
   font-family: 'roboto', sans-serif;
 }
@@ -18,12 +93,6 @@ p {
   font-weight: 300;
   font-size: 10pt;
   line-height: 17pt;
-}
-a {
-  color: #ffffff;
-}
-p a {
-  color: #767270;
 }
 .clear {
   clear: both;
@@ -94,8 +163,6 @@ h5 {
 
 /* body */
 body {
-  background-color: #eae8e7;
-  color: #767270;
   text-align: center;
 }
 .container {
@@ -105,8 +172,6 @@ body {
 /* Sidebar */
 .sidebar {
   text-align: left;
-  color: #ffffff;
-  background-color: #264653;
   overflow: hidden;
   display: block;
 }
@@ -135,8 +200,6 @@ body {
 }
 .sidebar .icon {
   margin-top: 3px;
-}
-.sidebar .icon .fa {
   display: inherit;
   text-align: center;
 }
@@ -148,7 +211,6 @@ body {
   margin: 0px;
 }
 .sidebar .info {
-  border-bottom: 1px solid #e9c46a;
   padding-left: 0px;
 }
 .sidebar .info span {
@@ -175,12 +237,8 @@ body {
   padding-left: 0px;
 }
 .sidebar .skill-line .progress {
-  background-color: #e9c46a;
   height: 2px;
   overflow: visible;
-}
-.sidebar .skill-line .determinate {
-  background-color: #ffffff;
 }
 .sidebar .skill-line .determinate .fa {
   font-size: 12px;
@@ -200,28 +258,19 @@ body {
 #site-nav {
   display: block;
   text-align: center;
-  background-color: #264653;
   margin-bottom: 14px;
 }
-
 #site-nav ul{
   margin: 10;
   list-style:none
 }
-
 #site-nav li{
   display:inline-block
 }
-
 #site-nav a{
   font-weight: bold;
   display:block;
   padding:0 1rem;
-}
-
-#site-nav a:hover,#site-nav a:focus{
-  color:#e9c46a;
-  border-bottom:4px solid #e9c46a
 }
 
 @media only screen and (max-width: 30rem){
@@ -244,8 +293,6 @@ body {
   font-size: 30pt;
 }
 .section .section-wrapper {
-  color: #ffffff;
-  background-color: #264653;
   overflow: hidden;
   margin-bottom: 24px;
   padding-bottom: 24px !important;
@@ -265,7 +312,6 @@ body {
 .custom-content-wrapper {
   padding-right: 30px;
   margin-bottom: 25px;
-  border-bottom: 1px solid #e9c46a;
 }
 .custom-content-wrapper:last-child {
   border-bottom: initial;
@@ -275,11 +321,7 @@ body {
   font-size: 12pt;
   line-height: 20pt;
 }
-.custom-content-wrapper h3 span {
-  color: #767270;
-}
 .custom-content-wrapper span {
-  color: #e9c46a;
   margin-top: 0px;
   font-size: 10pt;
   line-height: 15pt;
@@ -296,7 +338,6 @@ body {
 }
 .post-title {
   margin-top: -5px;
-  color: white;
   padding: 20px 30px;
 }
 .post-title h2 {
@@ -320,23 +361,7 @@ body {
 .blog-post:last-child {
   padding-right: 0px !important;
 }
-#blog-post-1 {
-  background-color: #e95855;
-}
-#blog-post-2 {
-  background-color: #707281;
-}
-#blog-post-3 {
-  background-color: #564d52;
-}
-#blog-post-4 {
-  background-color: #47bac9;
-}
-#blog-post-5 {
-  background-color: #68c02e;
-}
 .post-details {
-  background-color: #ffffff;
   padding: 20px 30px;
   margin-bottom: 24px;
 }
@@ -370,9 +395,6 @@ body {
   padding-bottom: 0px;
   background-color: #fff;
   padding: 20px 50px !important;
-}
-sup a {
-  color: #767270;
 }
 
 /* Contact */
