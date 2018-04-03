@@ -74,7 +74,7 @@
                             <div class="heading">
                                 <!-- IMAGE -->
                                 <div class="feature-img">
-                                    <a href="http://www.ryanjoyce.net"><img src="img/profile-img.jpg" class="responsive-img" alt=""></img></a>
+                                    <a href="http://www.rjoyce.io"><img src="img/profile.jpg" class="responsive-img" alt=""></img></a>
                                 </div>
                                 <!-- NAME AND TAGLINE -->
                                 <div class="title col s12 m12 l9 right  wow fadeIn" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
@@ -256,7 +256,13 @@
                                                         <span>Feb 6, 2018</span>
                                                     </div>
                                                     <div class="post-details">
-                                                        <p> Docker Compose is a tool for defining and running multi-container Docker applications. A single Dockerfile is used to define any given Docker Container, while Docker Compose has its own configuartion file that helps define how the multiple containers interact with one another. For instance, for communication between containers their needs to be a network backend that defines which containers can communicate with one another. For an example Docker Compose file, see <a href="https://github.com/champtc/Infrastructure/blob/master/Docker/ctci/docker-compose.yml">here</a>.
+                                                        <p> Docker Compose is a tool for defining and running multi-container Docker applications. A single Dockerfile is used to define any given Docker Container, while Docker Compose has its own configuration file that helps define how the multiple containers interact with one another. For instance, for communication between containers their needs to be a network backend that defines which containers can communicate with one another. For an example Docker Compose file to follow along, see my docker-compose file <a href="https://github.com/champtc/Infrastructure/blob/master/Docker/ctci/docker-compose.yml">here</a>.
+                                                        </p>
+
+                                                        <p> The previous docker-compose file is managing two services, both Logstash and AMQ. The `build` section specifies to look in that folder for the Dockerfile for assembling the container and use that, then I give that container a name. Since we can have multiple instances of the same container, Docker uses an internal DHCP IP addresses behind the seen, which is randomly mapped to the host machine. Thus, if a services is looking for another service on a specific port, they need to be changed in order to communicate. As seen from the ports section, I am simply specifying map this port to this port on the host machine, eg. container-port:host-port. I then specify which network the container should talk on, and you may have noticed that both services use the same network. Putting both services on the same network allows the services to communicate to each other even though they are both isolated in their own containers. Lastly, the volumes section allowed me to specify a folder from the container to actually be mapped to a folder on my host machine, giving me the ability to have persistent data across sessions - extremely useful.
+                                                        </p>
+
+                                                        <p> Hopefully you can see now why Docker and Docker-Compose can be so powerful and useful for both development and production environments. To learn more about Docker-Compose, click <a href="https://docs.docker.com/compose/">here</a>.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -276,7 +282,13 @@
                                                         <p>Being able to consistently deploy essential infrastructure is crucial for showing a product to a client. Docker aids in this field as instead of having to setup a Virtual Machine (VM) for all services, using docker containers keeps deploying microservices a breeze.
                                                         </p>
 
-                                                        <p> Traditionally, setting up a service such as Apache's Active Message Queue (AMQ), a user would either need to download and run their service locally or setup a VM - going through the process of installing an OS, updating, and finally installing and configuring the service. 
+                                                        <p> Traditionally, setting up a service such as Apache's Active Message Queue (AMQ), a user would either need to download and run their service locally or setup a VM - going through the process of installing an OS, updating, and finally installing and configuring the service. This is where Docker comes into play. Instead of having individual VMs dedicated to an entire OS and the service, Docker splits the OS from service. This is accomplished by Docker creating a VM, a very minimal one at that (~5MB), and where things turn weird is the ability to share the kernel between Docker "Containers." 
+                                                        </p>
+
+                                                        <p> Think of a Container as any given service, for our example let's assume it's a Logstash instance. Traditionally, if we wanted to setup multiple Logstash instances, we would need to setup everything from the ground up from the OS level up. With Docker, we can simply create the base container for Logstash, "spin up" the neessary containers, and load the various config files that we'd like to test, where each is on one VM and all are sharing the kernel. At Champion, this proved useful since we needed to test various config files, cleanly shifting which Logstash we were pointing at and quickly seeing results of each.
+                                                        </p>
+
+                                                        <p> While our use wasn't necessarily traditional, it proved useful for development purposes. The true power of Docker really shines when you can dynamically spin services up when needed and bring down others that are idling, creating much more flexible and scalable systems. To read me about Docker and its uses, click <a href="https://www.docker.com/">here</a>.
                                                         </p>
                                                     </div>
                                                 </div>
